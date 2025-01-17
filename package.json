@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "test": "jasmine"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aymanehlh/IPL_social-.git"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Aymanehlh/IPL_social-/issues"
   },
-  "homepage": "https://github.com/Aymanehlh/IPL_social-#readme"
+  "homepage": "https://github.com/Aymanehlh/IPL_social-#readme",
+  "devDependencies": {
+    "jasmine": "^5.5.0"
+  }
 }
