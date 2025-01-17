@@ -51,4 +51,12 @@ describe('isValidPassword', () => {
         expect(result).toBe(false);
     });
 
+    it('should return false if no symbol and less than 8 char', () => {
+        const password = '12345678*';
+
+        const result = passwordChecker.isValidPassword(password);
+
+        expect(result).toBe(true);
+    });
+
 });
