@@ -27,4 +27,12 @@ describe('isValidPassword', () => {
         expect(result).toBe(false);
     });
 
+    it('should return false for 8 password length', () => {
+        const password = '12345678';
+
+        const result = passwordChecker.isValidPassword8(password);
+
+        expect(result).toBe(true);
+    });
+
 });

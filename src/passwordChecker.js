@@ -10,6 +10,10 @@ export class PasswordChecker {
     isValidPassword3(password) {
         if (password.length ==3) return false; 
     }
+    isValidPassword8(password) {
+        if (password.length ==8) return true; 
+    }
+    
     
 }
   
