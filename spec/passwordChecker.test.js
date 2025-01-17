@@ -67,4 +67,12 @@ describe('isValidPassword', () => {
         expect(result).toBe(false);
     });
 
+    it('should return true if no symbol and less than 8 char and no number', () => {
+        const password = 'arhebder7*';
+
+        const result = passwordChecker.isValidPassword(password);
+
+        expect(result).toBe(true);
+    });
+
 });
