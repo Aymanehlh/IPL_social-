@@ -28,7 +28,7 @@ describe('isValidPassword', () => {
     });
 
     it('should return true for 8 password length', () => {
-        const password = '12345678';
+        const password = '12345678*';
 
         const result = passwordChecker.isValidPassword(password);
 
@@ -36,7 +36,7 @@ describe('isValidPassword', () => {
     });
 
     it('should return true for 9 password length', () => {
-        const password = '123456789';
+        const password = '123456789*';
 
         const result = passwordChecker.isValidPassword(password);
 
@@ -51,12 +51,20 @@ describe('isValidPassword', () => {
         expect(result).toBe(false);
     });
 
-    it('should return false if no symbol and less than 8 char', () => {
+    it('should return true if a symbol and morethan 8 char', () => {
         const password = '12345678*';
 
         const result = passwordChecker.isValidPassword(password);
 
         expect(result).toBe(true);
+    });
+
+    it('should return false if no symbol and less than 8 char and no number', () => {
+        const password = 'arhebder*';
+
+        const result = passwordChecker.isValidPassword(password);
+
+        expect(result).toBe(false);
     });
 
 });

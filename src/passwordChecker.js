@@ -1,13 +1,21 @@
 export class PasswordChecker {
 
     isValidPassword(password) {
-        if (password.length <8) return false; 
-        if (password.length >=8) return true; 
+        if (this.hasLessThan8Numbers(password)) return false; 
         if (!this.hasSymbol(password)) return false;
-        if (this.hasSymbol(password)) return true;
-    return true;
-}
+        if (!this.hasNumber(password)) return false;
+        return true;
+    }
 
     hasSymbol(password) {
-    return /[!@#$%^&*(),.?":{}|<>]/.test(password);
-};}
+        return /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    }
+
+    hasNumber(password) {
+        return /[0-9]/.test(password);
+    }
+
+    hasLessThan8Numbers(password) {
+        return password.length < 8;
+    }
+}
