@@ -18,5 +18,13 @@ describe('isValidPassword', () => {
 
         expect(result).toBe(false);
     });
+    
+    it('should return false for 3 password length', () => {
+        const password = '123';
+
+        const result = passwordChecker.isValidPassword3(password);
+
+        expect(result).toBe(false);
+    });
 
 });
