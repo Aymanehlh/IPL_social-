@@ -1,18 +1,11 @@
 export class PasswordChecker {
 
     isValidPassword(password) {
-        if (password.length ==0) return false; 
+        if (password.length <8) return false; 
+        return true;
         
     }
-     isValidPassword1(password) {
-        if (password.length ==1) return false; 
-    }
-    isValidPassword3(password) {
-        if (password.length ==3) return false; 
-    }
-    isValidPassword8(password) {
-        if (password.length ==8) return true; 
-    }
+    
     
     
 }

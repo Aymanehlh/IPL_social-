@@ -14,7 +14,7 @@ describe('isValidPassword', () => {
     it('should return false for 1 password length', () => {
         const password = '1';
 
-        const result = passwordChecker.isValidPassword1(password);
+        const result = passwordChecker.isValidPassword(password);
 
         expect(result).toBe(false);
     });
@@ -22,7 +22,7 @@ describe('isValidPassword', () => {
     it('should return false for 3 password length', () => {
         const password = '123';
 
-        const result = passwordChecker.isValidPassword3(password);
+        const result = passwordChecker.isValidPassword(password);
 
         expect(result).toBe(false);
     });
@@ -30,7 +30,15 @@ describe('isValidPassword', () => {
     it('should return false for 8 password length', () => {
         const password = '12345678';
 
-        const result = passwordChecker.isValidPassword8(password);
+        const result = passwordChecker.isValidPassword(password);
+
+        expect(result).toBe(true);
+    });
+
+    it('should return false for 9 password length', () => {
+        const password = '123456789';
+
+        const result = passwordChecker.isValidPassword(password);
 
         expect(result).toBe(true);
     });
